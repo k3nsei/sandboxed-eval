@@ -6,7 +6,6 @@ const proxyCache: WeakMap<Scope, any> = new WeakMap();
 
 export const compile = (expression: string): (scope: Scope) => any => {
     const fn = new Function('scope', `with (scope) { return ${expression}; }`);
-
     return (scope: Scope): any => {
         if (!proxyCache.has(scope)) {
             proxyCache.set(
