@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "umd",
+    "strict": true,
+    "lib": ["es2015"]
+  }
+}
